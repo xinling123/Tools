@@ -2763,7 +2763,7 @@ function setDhcpOrStatic() {
 # $1 is "in-target", $2 is "/etc/network/interfaces", $3 is "/etc/sysctl.d/99-sysctl.conf".
 function DebianModifiedPreseed() {
 	if [[ "$linux_relese" == 'debian' ]] || [[ "$linux_relese" == 'kali' ]]; then
-		debianConfFileDir="https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Debian"
+		debianConfFileDir="https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Debian"
 		debianConfFileDirCn="https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Debian"
 		# Must use ";" instead of using "&&", "echo -e" etc to combine multiple commands, or write text in files, recommend sed.
 		# Can't pass parameters correctly in preseed environment.
@@ -3988,9 +3988,9 @@ elif [[ "$linux_relese" == 'alpinelinux' ]]; then
 		if [[ "$IsCN" == "cn" ]]; then
 			alpineInstallOrDdAdditionalFiles "https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Alpine/alpineInit.sh" "https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Alpine/network/resolv_cn.conf" "https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Alpine/motd.sh" "mirrors.ustc.edu.cn" "mirrors.tuna.tsinghua.edu.cn" "https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Ubuntu/ubuntuInit.sh" "https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Windows/windowsInit.sh" "https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Windows/SetupComplete.bat" "https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/RedHat/RHELinit.sh" "mirrors.ustc.edu.cn"
 		else
-			alpineInstallOrDdAdditionalFiles "https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Alpine/alpineInit.sh" "https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Alpine/network/resolv.conf" "https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Alpine/motd.sh" "archive.ubuntu.com" "ports.ubuntu.com" "https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Ubuntu/ubuntuInit.sh" "https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Windows/windowsInit.sh" "https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Windows/SetupComplete.bat" "https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/RedHat/RHELinit.sh" "security.ubuntu.com"
+			alpineInstallOrDdAdditionalFiles "https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Alpine/alpineInit.sh" "https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Alpine/network/resolv.conf" "https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Alpine/motd.sh" "archive.ubuntu.com" "ports.ubuntu.com" "https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Ubuntu/ubuntuInit.sh" "https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Windows/windowsInit.sh" "https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Windows/SetupComplete.bat" "https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/RedHat/RHELinit.sh" "security.ubuntu.com"
 			# Reserved alternative mirror comes from gitlab.com of initial files for engineering, if you are not fascinated with debugging, don't uncomment with them!
-			# alpineInstallOrDdAdditionalFiles "https://gitlab.com/leitbogioro/Tools/-/raw/main/Linux_reinstall/Alpine/alpineInit.sh" "https://gitlab.com/leitbogioro/Tools/-/raw/main/Linux_reinstall/Alpine/network/resolv.conf" "https://gitlab.com/leitbogioro/Tools/-/raw/main/Linux_reinstall/Alpine/motd.sh" "archive.ubuntu.com" "ports.ubuntu.com" "https://gitlab.com/leitbogioro/Tools/-/raw/main/Linux_reinstall/Ubuntu/ubuntuInit.sh" "https://gitlab.com/leitbogioro/Tools/-/raw/main/Linux_reinstall/Windows/windowsInit.sh" "https://gitlab.com/leitbogioro/Tools/-/raw/main/Linux_reinstall/Windows/SetupComplete.bat" "https://gitlab.com/leitbogioro/Tools/-/raw/main/Linux_reinstall/RedHat/RHELinit.sh" "security.ubuntu.com"
+			# alpineInstallOrDdAdditionalFiles "https://gitlab.com/xinling123/Tools/-/raw/main/Linux_reinstall/Alpine/alpineInit.sh" "https://gitlab.com/xinling123/Tools/-/raw/main/Linux_reinstall/Alpine/network/resolv.conf" "https://gitlab.com/xinling123/Tools/-/raw/main/Linux_reinstall/Alpine/motd.sh" "archive.ubuntu.com" "ports.ubuntu.com" "https://gitlab.com/xinling123/Tools/-/raw/main/Linux_reinstall/Ubuntu/ubuntuInit.sh" "https://gitlab.com/xinling123/Tools/-/raw/main/Linux_reinstall/Windows/windowsInit.sh" "https://gitlab.com/xinling123/Tools/-/raw/main/Linux_reinstall/Windows/SetupComplete.bat" "https://gitlab.com/xinling123/Tools/-/raw/main/Linux_reinstall/RedHat/RHELinit.sh" "security.ubuntu.com"
 		fi
 		# Cloud init configurate documents and resources:
 		# Ubuntu cloud images:
@@ -4010,14 +4010,14 @@ elif [[ "$linux_relese" == 'alpinelinux' ]]; then
 		# disable cloud init service when next restart
 		# https://cloudinit.readthedocs.io/en/latest/howto/disable_cloud_init.html
 		alpineNetcfgMirrorCn="https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Alpine/network/"
-		alpineNetcfgMirror="https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Alpine/network/"
+		alpineNetcfgMirror="https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Alpine/network/"
 		[[ "$targetRelese" == 'Ubuntu' ]] && {
 			ubuntuCloudinitMirrorCn="https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/Ubuntu/CloudInit/"
-			ubuntuCloudinitMirror="https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/Ubuntu/CloudInit/"
+			ubuntuCloudinitMirror="https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/Ubuntu/CloudInit/"
 		}
 		[[ "$targetRelese" == 'AlmaLinux' || "$targetRelese" == 'Rocky' ]] && {
 			rhelCloudinitMirrorCn="https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/RedHat/CloudInit/"
-			rhelCloudinitMirror="https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/RedHat/CloudInit/"
+			rhelCloudinitMirror="https://raw.githubusercontent.com/xinling123/Tools/master/Linux_reinstall/RedHat/CloudInit/"
 		}
 		if [[ "$IPStackType" == "IPv4Stack" ]]; then
 			if [[ "$Network4Config" == "isDHCP" ]]; then
